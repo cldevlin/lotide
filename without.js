@@ -36,6 +36,8 @@ const without = function (array, itemsToRemove) {
   return newArray;
 };
 
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
-assertArraysEqual(without(["hello", 567, "goodbye"], ["foo", "hello"]), [567, "goodbye"]);
+module.exports = without;
+
+// assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+// assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+// assertArraysEqual(without(["hello", 567, "goodbye"], ["foo", "hello"]), [567, "goodbye"]);

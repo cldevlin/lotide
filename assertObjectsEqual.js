@@ -1,4 +1,4 @@
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
@@ -10,7 +10,7 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const eqObjects = function(object1, object2) {
+const eqObjects = function (object1, object2) {
   const objectKeys1 = Object.keys(object1);
   const objectKeys2 = Object.keys(object2);
   if (objectKeys1.length !== objectKeys2.length) {
@@ -28,7 +28,7 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
-const assertObjectsEqual = function(actual, expected) {
+const assertObjectsEqual = function (actual, expected) {
   const inspect = require('util').inspect;
   console.log(`Example label: ${inspect(actual)}`);
   if (eqObjects(actual, expected)) {
@@ -38,9 +38,11 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-assertObjectsEqual({ one: 1, two: 2 }, { one: 1, two: 2 });
-assertObjectsEqual({ one: 1, two: 2 }, { one: 1, two: 3 });
+module.exports = assertObjectsEqual;
 
-assertObjectsEqual({ one: 1, two: [2] }, { one: 1, two: [2] });
-assertObjectsEqual({ one: 1, two: [2, 3] }, { one: 1, two: [2, 3, 4] });
+// assertObjectsEqual({ one: 1, two: 2 }, { one: 1, two: 2 });
+// assertObjectsEqual({ one: 1, two: 2 }, { one: 1, two: 3 });
+
+// assertObjectsEqual({ one: 1, two: [2] }, { one: 1, two: [2] });
+// assertObjectsEqual({ one: 1, two: [2, 3] }, { one: 1, two: [2, 3, 4] });
 

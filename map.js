@@ -30,6 +30,8 @@ const map = function (array, callback) {
   return results;
 }
 
+module.exports = map;
+
 const words = ["ground", "control", "to", "major", "tom"];
 
 const results1 = map(words, word => word[0]);
@@ -42,12 +44,12 @@ const results3 = map(words, word => "word is: " + word)
 // console.log(results3);
 
 
-assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
-assertArraysEqual(results2, ['GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM']);
-assertArraysEqual(results3, [
-  'word is: ground',
-  'word is: control',
-  'word is: to',
-  'word is: major',
-  'word is: tom'
-]);
+// assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
+// assertArraysEqual(results2, ['GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM']);
+// assertArraysEqual(results3, [
+//   'word is: ground',
+//   'word is: control',
+//   'word is: to',
+//   'word is: major',
+//   'word is: tom'
+// ]);

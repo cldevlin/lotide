@@ -10,16 +10,6 @@ const eqArrays = function (array1, array2) {
   return true;
 };
 
-const assertArraysEqual = function (actual, expected) {
-  if (eqArrays(actual, expected)) {
-    //console.log("✅ Assertion Passed: " + actual + " === " + expected);
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    //console.log("🛑 Assertion Failed: " + actual + " !== " + expected);
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const map = function (array, callback) {
   const results = [];
 
@@ -32,15 +22,15 @@ const map = function (array, callback) {
 
 module.exports = map;
 
-const words = ["ground", "control", "to", "major", "tom"];
+// const words = ["ground", "control", "to", "major", "tom"];
 
-const results1 = map(words, word => word[0]);
-// console.log(results1);
+// const results1 = map(words, word => word[0]);
+// // console.log(results1);
 
-const results2 = map(words, word => word.toUpperCase())
-// console.log(results2);
+// const results2 = map(words, word => word.toUpperCase())
+// // console.log(results2);
 
-const results3 = map(words, word => "word is: " + word)
+// const results3 = map(words, word => "word is: " + word)
 // console.log(results3);
 
 
